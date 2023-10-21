@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <h1>WEATHER APP</h1>
+
+            <!-- search wheather btn -->
+            <div class="tab-container">
+                <p class="tab" data-userWheather>Your Wheather</p>
+                <p class="tab" data-searchWheather>Search Wheather</p>
+            </div>
+    
+            <!-- search wheather -->
+            <div class="wheather-container">
+                <div class="grant-location-wheather ">
+                    <img src="https://bidyasagaranupam.github.io/WeatherApp/assets/location.png" alt="" width="80" height="80" loading="lazy">
+                    <p>Grant location access</p>
+                    <p>Allow access to get wheather information</p>
+                    <button class="btn" data-grantBtn>Grant Access</button>
+                </div>
+    
+                <!--search tool -->
+                <form class="form-conatiner" data-searchForm>
+                    <input type="text" placeholder="Search From City....." data-searchInput>
+                    <button class="btn">
+                        <img src="https://bidyasagaranupam.github.io/WeatherApp/assets/search.png" alt="" width="20" height="20" loading="lazy">
+                    </button>
+                </form>
+    
+                <!-- loading gif-->
+                <div class="loading-container">
+                    <img src="https://bidyasagaranupam.github.io/WeatherApp/assets/loading.gif" alt="" height="150" width="150">
+                    <p>loading...</p>
+                </div>
+    
+                <!--Show  wheather info -->
+                <div class="user-info-wheather">
+
+                    <div class="name">
+                        <p data-cityName></p>
+                        <img data-countryIcon>
+                    </div>
+                    <p  data-wheatherDesc></p>
+                    <img data-wheatherIcon width="100px" height="100px" style="margin:auto">
+                    <p data-temp></p>
+    
+                    <div class="parameter-container">
+    
+                        <div class="parameter">
+                            <img src="https://bidyasagaranupam.github.io/WeatherApp/assets/wind.png" alt="">
+                            <p>Windspeed</p>
+                            <p data-windSpeed></p>
+                        </div>
+                        <div class="parameter">
+                            <img src="https://bidyasagaranupam.github.io/WeatherApp/assets/humidity.png" alt="">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+                        <div class="parameter">
+                            <img src="https://bidyasagaranupam.github.io/WeatherApp/assets/cloud.png" alt="">
+                            <p>Cloud</p>
+                            <p data-cloud></p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
