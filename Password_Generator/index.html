@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper" class="flex">
+      <video autoplay loop muted class="bg-video">
+        <source src="./assets/backgroundvideo.mp4" />
+      </video>
+      <!--overlay-->
+      <div class="overlay"></div>
+
+      <div class="container">
+        <h1>Password Generator</h1>
+
+        <!--display password-->
+        <div class="display-container flex">
+          <input
+            type="text"
+            name=""
+            id="display-password"
+            readonly
+            placeholder="Password"
+          />
+          <button onclick="copyToClipboard();" class="copy-btn flex">
+            <img src="./assets/copyicon.png" alt="" />
+            <span class="status unactive"></span>
+          </button>
+        </div>
+
+        <!--password length-->
+        <div class="pass-length flex">
+          <p>Password Length</p>
+          <p class="password-length">0</p>
+        </div>
+
+        <!--range-->
+        <div class="range-cont">
+          <input type="range" name="" id="" min="0" max="20" data-lengthRange />
+        </div>
+
+        <!-- checkboxes -->
+        <div class="checkbox-div flex class="flex check-content"">
+          <div class="flex check-content">
+            <input type="checkbox" name="" id="number" />
+            <label for="number" class="togglebtn"></label>
+            <label for="number">Numbers <span>(0-9)</span></label>
+          </div>
+
+          <div class="flex check-content">
+            <input type="checkbox" name="" id="uppercase" />
+            <label for="uppercase" class="togglebtn"></label>
+            <label for="uppercase">Uppercase <span>(A-Z)</span></label>
+          </div>
+
+          <div class="flex check-content">
+            <input type="checkbox" name="" id="lowercase" />
+            <label for="lowercase" class="togglebtn"></label>
+            <label for="lowercase">Lowercase <span>(a-z)</span></label>
+          </div>
+
+          <div class="flex check-content">
+            <input type="checkbox" name="" id="symbols" />
+            <label for="symbols" class="togglebtn"></label>
+            <label for="symbols">Symbols <span>($-@)</span></label>
+          </div>
+        </div>
+
+        <!--strength-->
+        <div class="strength flex">
+          <p>Strength</p>
+          <div class="indicator">
+          </div>
+        </div>
+
+        <!--generate btn-->
+        <button onclick="addCheckboxelement();" class="primary-btn">Generate Password</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

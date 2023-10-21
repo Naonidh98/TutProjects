@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #e29587, #d66d75);
+}
+.gameinfo{
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 234px;
+  color: #fff;
+  margin: auto;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1rem;
+}
+.btn{
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+.tictaetoe{
+  width: 90%;
+  max-width: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 20rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #00000070;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  aspect-ratio: 1/1;
+}
+.box{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+#box-5{
+  border: 2px solid white;
+}
+#box-4,#box-6{
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+#box-2,#box-8{
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+.selected{
+  background-color: greenyellow;
+  color: black;
+}
